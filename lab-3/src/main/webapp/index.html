@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Form</title>
+</head>
+<body>
+    <h2>Student Details Form</h2>
+    <form action="/lab-3/StudentDetails" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="rollNo">Roll No:</label>
+        <input type="text" id="rollNo" name="rollNo" required><br>
+
+        <label>Sex:</label>
+        <input type="radio" id="male" name="sex" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="sex" value="Female" required>
+        <label for="female">Female</label><br>
+
+        <label for="semester">Semester:</label>
+        <select id="semester" name="semester" required>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label>Hobbies:</label>
+        <input type="checkbox" id="reading" name="hobbies" value="Reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="sports" name="hobbies" value="Sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="hobbies" value="Music">
+        <label for="music">Music</label><br>
+
+        <label for="programmingLanguage">Programming Language Known:</label>
+        <input type="text" id="programmingLanguage" name="programmingLanguage"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

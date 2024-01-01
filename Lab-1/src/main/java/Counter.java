@@ -24,30 +24,22 @@ public class Counter extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // Get the session
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
 
-        // Get the counter from the session, default to 0 if not present
         Integer counter = (Integer) session.getAttribute("counter");
         if (counter == null) {
             counter = 0;
         }
 
-        // Increment the counter
         counter++;
 
-        // Update the counter in the session
         session.setAttribute("counter", counter);
 
-        // Set response content type
         response.setContentType("text/html");
 
-        // Create a PrintWriter to write the response
         PrintWriter out = response.getWriter();
 
-        // Write the HTML response
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Page Counter Servlet</title>");

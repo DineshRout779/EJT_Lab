@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
-  <display-name>lab-1</display-name>
+  <display-name>lab-7</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -11,12 +11,18 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>Counter</display-name>
-    <servlet-name>Counter</servlet-name>
-    <servlet-class>Counter</servlet-class>
+    <display-name>StudentDetailsServlet</display-name>
+    <servlet-name>StudentDetailsServlet</servlet-name>
+    <servlet-class>StudentDetailsServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Counter</servlet-name>
-    <url-pattern>/Counter</url-pattern>
+    <servlet-name>StudentDetailsServlet</servlet-name>
+    <url-pattern>/StudentDetailsServlet</url-pattern>
   </servlet-mapping>
+  
+  <dependency>
+        <groupId>jakarta.servlet.jsp.jstl</groupId>
+        <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+        <version>1.2.7</version> <!-- Use the version you downloaded -->
+    </dependency>
 </web-app>
